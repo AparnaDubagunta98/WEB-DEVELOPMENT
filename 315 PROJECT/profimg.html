@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+<!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> -->
+<link rel="stylesheet" href="page_style.css" />
+<style type="text/css">
+
+.flip-card {
+  position: absolute;
+  top:50vh;
+  bottom:20vh;
+  background-color: transparent;
+  width: 400px;
+  height: 500px;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  float: bottom;
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: rgba(197, 198, 199,0);
+  border-style: solid;
+  border-width: :4px;
+  border-color:#66fcf1;
+  border-radius: 10px;
+  color: #45a29e;
+  align-items: center;
+  justify-content: space-around;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: black;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+#fc1{
+	left:5%;
+}
+#fc2{
+	left:36%;
+}
+#fc3{
+	right:5%;
+}
+.ft{
+	display: inline-block;
+	position: relative;
+	top: 45%;
+	font-weight: bold;
+	font-size: 50px;
+}
+
+.flip-card-back{
+  display: inline-block;
+  position: relative;
+  top: 45%;
+  font-weight: bold;
+  font-size: 20px;
+
+}
+
+.intro{
+  position: absolute;
+  top:30vh;
+  left:50vw;
+}
+
+	
+</style>
+
+
+</head>
+<body> 
+<div class = "overwrap">
+<!---------NAVIGATION BAR-------------->
+		<div class="menubar">
+			<nav>
+				<div class="hamburger">
+					<div class = "line"></div>
+					<div class = "line"></div>
+					<div class = "line"></div>
+				</div>
+				<ul class="nav-links">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="about.html">About me</a></li>
+					<li><a href="#">Proffessional Image</a></li>
+					<li><a href="portfolio.html">Potfolio</a></li>
+					<li><a href="services.html">Services</a></li>
+				</ul>
+			</nav>
+
+		</div>
+<!----------END OF NAVIGATION BAR--------------->
+
+
+
+<center>
+   <div class="specific">
+	 <h1>PROFFESSIONAL IMAGE</h1>
+   <br> <br><br><br><br><br>
+   <div class="intro">
+    <center>Hello friends</center>
+   </div>  
+	<div class="flip-card" id="fc1">
+      <div class="flip-card-inner">
+          <div class="flip-card-front">
+          	<div class="ft">
+          		HELLO
+          	</div>
+          </div>
+          <div class="flip-card-back">
+		      <h1>John Doe</h1>
+		      <p>Architect & Engineer</p>
+		      <p>We love that guy</p>
+          </div>
+     </div>
+    </div>
+
+    <div class="flip-card" id="fc2">
+      <div class="flip-card-inner">
+          <div class="flip-card-front">
+          	<div class="ft">
+          		HELLO
+          	</div>
+          </div>
+          <div class="flip-card-back">
+		      <h1>John Doe</h1>
+		      <p>Architect & Engineer</p>
+		      <p>We love that guy</p>
+          </div>
+     </div>
+    </div>
+
+    <div class="flip-card" id="fc3">
+      <div class="flip-card-inner">
+          <div class="flip-card-front">
+          	<div class="ft">
+          		HELLO
+          	</div>
+          </div>
+          <div class="flip-card-back">
+		      <h1>John Doe</h1>
+		      <p>Architect & Engineer</p>
+		      <p>We love that guy</p>
+          </div>
+     </div>
+    </div>
+
+   </div>
+</center>
+
+
+</div>
+<script src="allpages.js"></script>
+
+
+
+</body>
+</html>
