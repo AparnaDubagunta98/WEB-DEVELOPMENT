@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+<!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> -->
+<link rel="stylesheet" href="page_style.css" />
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:700&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style type="text/css">
+@media screen and (min-width: 660px) {
+.gallery{
+	position: absolute;
+	top: 55%;
+	left: 30%;
+
+	transform: translate(-50%,-50%);
+	margin:0;
+	padding: 0;
+	width: 600px;
+	height: 150px;
+	transform: rotate(0deg);
+
+}
+.texts{
+	text-align: center;
+	font-weight: bold;
+	font-size: 20px;
+
+}
+
+.gallery li{
+	list-style: none;
+	position: absolute;
+	width: 200px;
+	height: 200px; 
+	background-color: white;
+	transform: rotate(45deg);
+	transition: 0.5s;
+	margin:-100px;
+	opacity:1;
+
+}
+
+.gallery li:hover {
+/*	opacity:0.5;*/
+	transform: rotate(-0deg);
+		z-index:6;
+}
+
+.gallery li:hover .overlay{
+	opacity: 1;
+	transform: rotate(-0deg)
+	z-index:6;
+}
+.gallery li.i1{
+	top:0;
+	left:0;
+
+}
+.overlay{
+	opacity: 0;
+}
+.gallery li.i2{
+	bottom:0;
+	left:25%;
+	
+}
+.gallery li.i3{
+	top:0;
+	left:50%;
+	
+}
+.gallery li.i4{
+	bottom:0;
+	left:75%;
+	
+}
+.gallery li.i5{
+	top:0;
+	left:100%;
+	
+}
+
+.gallery li .bgim{
+	width: 100%;
+	height: 100%;
+	z-index:0;
+	
+}
+
+
+.gallery li.i1 .bgim{
+background:url("kids.png");	
+background-size: cover;
+
+}
+
+.gallery li.i2 .bgim{
+/*background-image: url("appy.jpg");	
+background-size: cover;*/
+background-color: #45a29e;
+}
+.gallery li.i3 .bgim{
+background:url("school.png");	
+background-size: cover;
+/*background-color: #45a29e;
+*/}
+.gallery li.i4 .bgim{
+/*background:url("appy.jpg");	
+background-size: cover;*/
+background-color: #45a29e;
+}
+.gallery li.i5 .bgim{
+background:url("food.png");	
+background-size: cover;
+}
+}
+
+</style>
+
+
+</head>
+<body> 
+	<div class = "overwrap">
+		<!---------NAVIGATION BAR-------------->
+		<div class="menubar">
+			<nav>
+				<div class="hamburger">
+					<div class = "line"></div>
+					<div class = "line"></div>
+					<div class = "line"></div>
+				</div>
+				<ul class="nav-links">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="about.html">About me</a></li>
+					<li><a href="profimg.html">Proffessional Image</a></li>
+					<li><a href="portfolio.html">Potfolio</a></li>
+					<li><a href="#">Services</a></li>
+				</ul>
+			</nav>
+
+		</div>
+<!----------END OF NAVIGATION BAR--------------->
+		<center>
+		<div class="specific">
+			<h1>SERVICES TO SOCIETY</h1>
+		</div>
+		
+		<ul class="gallery">
+			<a href="http://www.srmab.org.in/" style="color:#66fcf1">
+			<li class="i1">
+			  <div class="bgim">
+				<div class="overlay"> 
+				  <div class="texts">
+				  	Teaching middle school blind children English and Math.<br>
+				  	Click to view.
+			      </div>
+		        </div>
+	          </div>
+            </li></a>
+			<li class="i4">
+			  <div class="bgim">
+				<div class="overlay"> 
+				  <div class="texts" style="color:black;">
+					If we do not lay out ourselves in the service of mankind whom should we serve?	<br>--Abigail Adams		      
+					</div>
+		        </div>
+	          </div>
+            </li>
+			<li class="i3">
+			  <div class="bgim">
+				<div class="overlay"> 
+				  <div class="texts">
+					Teaching Indian Underpriviledged Children      
+					</div>
+		        </div>
+	          </div>
+            </li>
+			<li class="i2">
+			  <div class="bgim">
+				<div class="overlay"> 
+				  <div class="texts" style="color:black; font-size:17px;">
+					Knowledge is power. Information is liberating. Education is the premise of progress, in every society, in every family.	<br>--Kofi Annan	      
+					</div>
+		        </div>
+	          </div>
+            </li>
+			<li class="i5">
+			  <div class="bgim">
+				<div class="overlay"> 
+				  <div class="texts" >
+					  Distributing food to homeless people every thursday in India.	      
+					</div>
+		        </div>
+	          </div>
+            </li>
+		</ul>
+
+
+
+
+
+		</center>
+
+
+	</div>
+	<script src="allpages.js"></script>
+
+</body>
+
+
+
+
+</html>

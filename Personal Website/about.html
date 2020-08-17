@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+<!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> -->
+<link rel="stylesheet" href="page_style.css" />
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:700&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style type="text/css">
+
+.menuitem{
+	width: 50px;
+	height: 50px;
+/*	border: 0px solid;
+	border-radius: 100%;*/
+}
+.image-cont{
+	display: block;
+	float:right;
+	width: 50%;
+	overflow-x: hidden;
+	margin:0;
+}
+.bgimg{
+
+  width: 100%;
+  height:100vh;
+  bottom: 60vh;
+/*  border-style: solid;
+  border-width: 10px;
+  border-color: #66fcf1;
+  border-radius: 10%;*/
+  background-image: url("appy.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow-y: scroll;
+  z-index: 3;
+  color: black;
+  
+}	
+
+
+.info {
+  text-align: left;
+  position: relative;
+ top: 16vh;
+  left: 0.8vw;
+  font-weight: bold;
+  color:black;
+  font-size: 20px;
+}
+
+
+.writeup{
+  position: relative;
+  width: 40vw;
+  height:70vh;
+  top:15vh;
+  right:2vw;
+  left: 3vw;
+  z-index: 3;
+  
+/*  border-style: solid;
+  border-left: none;
+  border-width: 4px;
+  border-color: #66fcf1;
+  border-radius: 5px;*/
+  /*float: right;*/
+  padding: 100px;
+  margin: 40px;
+  align-items: center;
+  justify-content: space-around;
+}
+
+
+
+input[type="checkbox"]{
+	z-index:3;
+	-webkit-appearance:none;
+	position: absolute;
+	left: 19vw;
+	top: 34vh;
+	width: 100px;
+	height: 100px;
+	display: inline-block;
+	background: #000;
+	border-radius: 100%;
+	outline: none;
+	align-items: center;
+	transform: translate(-50%,-50%);
+}
+
+input[type="checkbox"]:before{
+	cursor: pointer;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	content:'CONNECT';
+	color:#66fcf1;
+	background: rgb(38, 50, 64);
+	border-radius: 100%;
+	text-align: center;
+	line-height: 100px;
+	font-weight: bold;
+}
+
+.m1,.m2,.m3,.m4,.m5{
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+	transition: all 0.5s;
+}
+
+
+input[type="checkbox"]:checked ~ .m1{
+	left:7vw;
+	top:5;
+
+}
+
+input[type="checkbox"]:checked ~ .m2{
+	left:25vw;
+	top:57vh;
+
+}
+
+input[type="checkbox"]:checked ~ .m3{
+	left:19vw;
+	top:9vh;
+}
+
+input[type="checkbox"]:checked ~ .m4{
+	left:13vw;
+	top:58vh;
+}
+
+input[type="checkbox"]:checked ~ .m5{
+	left:31vw;
+	bottom:10vh;
+}
+
+@media only screen {
+.rotor {
+  position: absolute;
+  top:50vh;
+  bottom:20vh;
+  left:5vw;
+  background-color: transparent;
+  width: 40vw;
+  height: 60vh;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  float: bottom;
+}
+
+
+.outerCircle {
+size: auto;
+background-color: transparent;
+border: 8px solid rgba(102, 252, 241,1);
+opacity: .9;
+border-right:solid transparent;
+border-left:solid transparent;
+border-radius: 100%;
+width: 500px;
+height: 500px;
+margin: 0 auto;
+-moz-animation: spinPulse 3s infinite ease-in-out;
+-webkit-animation: spinPulse 3s infinite ease-in-out;
+}
+.innerCircle {
+background-color: transparent;
+border: 5px solid white;
+opacity: .9;
+border-left: 5px solid transparent;
+border-right: 5px solid transparent;
+border-radius: 100%;
+top: -450px;
+width: 420px;
+height: 420px;
+margin: 0 auto;
+position: relative;
+-moz-animation: spinoffPulse 1.5s infinite linear;
+-webkit-animation: spinoffPulse 1.5s infinite linear;
+
+}
+
+
+@-moz-keyframes spinPulse {
+    0% { -moz-transform:rotate(160deg); opacity:0; box-shadow:0 0 1px #bdd73c;}
+  50% { -moz-transform:rotate(145deg); opacity:1; }
+  100% { -moz-transform:rotate(-320deg); opacity:0; }
+}
+@-moz-keyframes spinoffPulse {
+    0% { -moz-transform:rotate(0deg); }
+  100% { -moz-transform:rotate(360deg);  }
+}
+@-webkit-keyframes spinPulse {
+    0% { -webkit-transform:rotate(160deg); opacity:0; box-shadow:0 0 1px #bdd73c; }
+  50% { -webkit-transform:rotate(145deg); opacity:1;}
+  100% { -webkit-transform:rotate(-320deg); opacity:0; }
+}
+@-webkit-keyframes spinoffPulse {
+    0% { -webkit-transform:rotate(0deg); }
+  100% { -webkit-transform:rotate(360deg); }
+}
+@-moz-keyframes rotatecircle {
+    0% { -moz-transform:rotate(0deg); }
+  100% { -moz-transform:rotate(-360deg); }
+}
+
+@-webkit-keyframes rotatecircle {
+    0% { -webkit-transform:rotate(0deg); }
+100% { -webkit-transform:rotate(-360deg); }
+}
+}
+
+
+</style>
+
+</head>
+<body> 
+	<div class = "overwrap">
+		<!---------NAVIGATION BAR-------------->
+		<div class="menubar">
+			<nav>
+				<div class="hamburger">
+					<div class = "line"></div>
+					<div class = "line"></div>
+					<div class = "line"></div>
+				</div>
+				<ul class="nav-links">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="#">About me</a></li>
+					<li><a href="profimg.html">Proffessional Image</a></li>
+					<li><a href="portfolio.html">Potfolio</a></li>
+					<li><a href="services.html">Services</a></li>
+				</ul>
+			</nav>
+
+		</div>
+<!----------END OF NAVIGATION BAR--------------->
+		<center>
+		<div class="specific">
+			<h1>ABOUT ME</h1>
+		</div>
+		</center>
+		<br><br><br>
+
+		    <div class="rotor">
+		      <div class="outerCircle"></div>
+		      <div class="innerCircle"></div>
+		      </div>
+		    </div>
+
+		<div class="image-cont">
+		    <div class="bgimg">
+		    <div class="info">
+		    <h3>VENKATA DUBAGUNTA</h3><br>
+	    	Aggie At Heart, Brain says Code<br>
+	    	Major: Computer Engieering<br><br>
+	    	<p style="font-size:15px;">
+	    	  If its a really beautiful day outside, you'll <br>either see me 
+	    	  playing basketball or at weird<br> corners with my camera making basic<br> attempts at being a creepy street<br> photographer.
+	    	  <br><br>
+	    	  Music is something thats driven me all <br>my life. Give me a Guitar and get ready <br>to run!!<br><br>
+	    	  Poetry is my jam.<br> Open mic stages are Home.
+	    	  <br><br>
+	    	  <= Connect with me <br>professionally,for a friendly chat <br>or try checking out my blog called<br> SoulSpill!
+
+	    	</p>
+
+	        </div>
+	    	</div>
+	    	<!-- <img class="bgimg" src="appy.jpg" /> -->
+
+
+	    </div>
+
+	    <div class="writeup">
+
+	    	<input type="checkbox">
+	    	<div class="m1"><a href="https://www.instagram.com/aparna_dubagunta/" style="color: #66fcf1"><img class="menuitem" src="insta.png"></a></div>
+	    	<div class="m2"><a href="https://www.facebook.com/aparna.dubagunta" style="color: #66fcf1"><img class="menuitem" src="fb.png"></a></div>
+	    	<div class="m3"><a href="https://www.linkedin.com/in/venkata-dubagunta/" style="color: #66fcf1"><img class="menuitem" src="ln.png"></a></div>
+	    	<div class="m4"><a href="https://soulsspill.wordpress.com/" style="color: #66fcf1"><img class="menuitem" src="web.png"></a></div>
+	    	<div class="m5"><a href="mailto: aparna98@tamu.edu" style="color: #66fcf1"><img class="menuitem" src="email.png"></a></div>
+
+
+		</div>
+
+
+
+		<br><br><br>
+
+<!-- <div class="footer">
+<hr>
+<br><br><br><br><br><br>
+</div>
+ -->
+<script src="allpages.js"></script>
+</body>
+
+
+</html>

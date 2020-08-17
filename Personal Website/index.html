@@ -1,0 +1,245 @@
+
+<html>
+<head>
+<title>Venkata Dubagunta</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:700&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+*{
+	box-sizing:border box;
+}
+
+
+
+body{
+	margin:0;
+	font-family: 'Open Sans', sans-serif;
+/*	font-size: 1rem;*/
+	line-height: 2;
+	color:#000;
+	overflow-x:hidden;
+	text-align: center;
+
+}
+
+
+.overwrap{
+	position: fixed;
+	float: left;
+
+}
+
+.v-header{
+	height: 100%;
+	width: 100%;
+	display:flex;
+	align-items:center;
+	color: #000;
+}
+
+.container{
+
+	padding-left: 1rem;
+	padding-right: 1rem;
+	margin:auto;
+	text-align: center;
+
+}
+
+.video-wrap{
+	position: absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	background-color: black;
+	overflow:hidden;
+	opacity: 1;
+	z-index:0.1;
+
+
+}
+
+.video-wrap video{
+	min-width: 100%;
+	min-height: 100%;
+
+}
+
+.overlay{
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left:0;
+	z-index:3;
+	opacity:1;
+}
+
+.overwrap{
+	position: fixed;
+	z-index:6;
+	float: center;
+}
+
+.content{
+	z-index:6;
+	text-align: center;
+    display: block;
+    vertical-align: middle;
+
+}
+
+.content h2{
+	font-size: 55px;
+	color: #66fcf1;
+	margin-bottom: 0;
+/*	vertical-align: middle;*/
+	z-index:6;
+	position: fixed;
+	left:50vh;
+	right: 50vh;
+	bottom:50vh;
+
+}
+.content p{
+	font-weight: bold;
+	position: fixed;
+	color: white;
+	margin-bottom: 0;
+	position: fixed;
+	z-index:6;
+	top:50%;
+	left:27%;
+
+
+}
+
+a{
+	text-decoration: none;
+	color: #eee;
+}
+
+.menu{
+	margin:0 auto;
+	position: fixed;
+	left:11vw;
+	bottom:20vh;
+	display: inline-block;
+
+
+}
+
+nav{
+	color:white;
+	padding-top: 5rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	text-transform: uppercase;
+	font-size: 1.8rem;
+}
+
+nav ul{
+	display: flex;
+}
+
+nav ul li{
+	list-style: none;
+}
+
+nav ul li a{
+	padding: 1rem 0;
+	margin:0 3rem;
+	position:relative;
+	letter-spacing: 2px;
+}
+
+nav ul li a:last-child{
+	margin-right: 0;
+}
+
+nav ul li a::before,
+nav ul li a::after{
+	content: '';
+	position: absolute;
+	width:100%;
+	height: 2px;
+	background-color: #66fcf1;
+	left: 0;
+	transform:scaleX(0);
+	transition: all .5s;
+
+}
+
+nav ul li a::before{
+	top:0;
+	transform-origin: left;
+}
+nav ul li a::after{
+	bottom:0;
+	transform-origin: right;
+}
+
+nav ul li a:hover::before,
+nav ul li a:hover::after{
+	transform: scaleX(1);
+}
+
+@keyframes slideIn{
+	from{
+
+	}
+	to{
+		transform-origin: translateX(0);
+	}
+}
+
+
+
+
+
+
+</style>
+</head>
+
+
+<body>
+
+<header class= "v-header container">
+	<div class="video-wrap">
+		<video poster="bg.mp4" id="bgvid" playsinline autoplay muted loop>
+			<source src="bg.mp4" type="video/mp4">
+		</video>
+	</div>
+	<div class = "overlay"></div>
+
+	</header>
+	<center>
+	<div class="overwrap">
+	<center>
+	<div class = "content">
+		<h2> VENKATA DUBAGUNTA </h2>
+		<p> You should know me layer by layer rather than in a nutshell.Explore to know me more!!</p>
+
+	</div> </center>
+	<br><br><br>
+	<div class="menu" >
+		<nav>
+			<ul>
+				<li><a href="about.html">ABOUT ME</a></li>
+				<li><a href="profimg.html">PROFFESSIONAL IMAGE</a></li>
+				<li><a href="portfolio.html">PORTFOLIO</a></li>
+				<li><a href="services.html">SERVICES</a></li>
+			</ul>
+		</nav>
+	</div>
+	</div>
+
+
+
+
+</center>
+</body>
+</html>
